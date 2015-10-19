@@ -20,6 +20,7 @@ def max_profit( stock_prices_yesterday ):
 
 	for price in stock_prices_yesterday:
 
+		# skip first two
 		if i < 2:
 			i += 1
 			pass
@@ -32,5 +33,8 @@ def max_profit( stock_prices_yesterday ):
 		# always want a lower buying price
 		elif price < buy_price:
 			buy_price = price
+
+		# update best_profit
+		best_profit = sell_price - buy_price
 
 	return best_profit
