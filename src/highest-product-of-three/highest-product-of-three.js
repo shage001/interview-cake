@@ -15,8 +15,8 @@
  	for ( elem in arr )
  	{
  		highestOfThree = Math.max( highestOfThree, elem * highestOfTwo, elem * lowestOfTwo );
- 		highestOfTwo = Math.max( highestOfTwo, elem * highest );
- 		lowestOfTwo = Math.min( lowestOfTwo, elem * lowest );
+ 		highestOfTwo = Math.max( highestOfTwo, elem * highest, elem * lowest );
+ 		lowestOfTwo = Math.min( lowestOfTwo, elem * lowest, elem * highest );
  		highest = Math.max( highest, elem );
  		lowest = Math.min( lowest, elem );
  	}
