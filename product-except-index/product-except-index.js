@@ -10,17 +10,17 @@
  	var productArray = arr.slice();
  	// make two passes over array: front to back and back to front
  	var len = arr.length;
-    var productSoFar = 1;
+ 	var productSoFar = 1;
  	for ( var i = 0; i < len; i++ )
  	{
  		productArray[i] = productSoFar;
-        productSoFar *= arr[i];
+ 		productSoFar *= arr[i];
  	}
-   	productSoFar = 1;
+ 	productSoFar = 1;
  	for ( var i = len - 1; i >= 0; i-- )
  	{
  		productArray[i] *= productSoFar;
-        productSoFar *= arr[i];
+ 		productSoFar *= arr[i];
  	}
-   return productArray;
+ 	return productArray;
  }
