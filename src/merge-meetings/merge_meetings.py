@@ -10,3 +10,21 @@ def condense_meeting_times( arr ):
 	Write a function condense_meeting_times() that takes an array of meeting time ranges and returns 
 	an array of condensed ranges.
 	"""
+	arr.sort()
+	condensed_meetings = []
+	cur_start = arr[0][0]
+	cur_end = arr[0][1]
+
+	for meeting in arr:
+		if cur_end > meeting[1]:
+			pass
+		elif cur_end > meeting[0]:
+			cur_end = meeting[0]
+		else:
+			condensed_meetings.append( ( cur_start, cur_end ) )
+			cur_start = meeting[0]
+			cur_end = meeting[1]
+
+	condensed_meetings.append( ( cur_start, cur_end ) )
+
+	return condensed_meetings
