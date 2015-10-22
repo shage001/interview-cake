@@ -30,7 +30,7 @@ function getLargestInBST( treeRoot )
 	while ( true )
 	{
 		if ( !node.rightChild ) {
-			return node;
+			return node.value;
 		}
 		else {
 			node = node.rightChild;
