@@ -20,3 +20,5 @@ pyfile+=".py"
 mkdir $dir
 touch $dir"/"$jsfile
 touch $dir"/"$pyfile
+open $dir"/"$jsfile
+open $dir"/"$pyfile
