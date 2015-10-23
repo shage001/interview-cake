@@ -1,5 +1,5 @@
-def fib( n ):
+def delete_node( node ):
 	"""
 	**********************************************************************************************************************
-	Write a function fib() that a takes an integer n and returns the nth fibonacci number.
+	Delete a node from a singly-linked list, given only a variable pointing to that node.
 	"""
