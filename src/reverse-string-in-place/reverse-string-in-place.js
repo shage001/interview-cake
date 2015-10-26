@@ -14,6 +14,8 @@ function reverseStringInPlace( str )
 		var temp = chars[j];
 		chars[j] = chars[i];
 		chars[i] = temp;
+		i++;
+		j--;
 	}
 	return chars.join();
 }
