@@ -37,4 +37,8 @@ function wordCloud( str )
 		var letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ-\''; // hyphenated words and apostrophes count
 		return letters.includes( character );
 	};
+
+	return {
+		addWordsToMap: addWordsToMap
+	};
 }
