@@ -17,7 +17,7 @@ function condenseMeetingTimes( arr )
 	var curEnd = arr[0][1];
 
 	/* check all meetings and keep track of overlap */
-	for ( meeting in arr )
+	arr.forEach( function( meeting )
 	{
 		/* next meeting is entirely contained in current */
 		if ( curEnd > meeting[1] ) {
@@ -33,7 +33,7 @@ function condenseMeetingTimes( arr )
 			curStart = meeting[0];
 			curEnd = meeting[1];
 		}
-	}
+	});
 	condensedMeetings.push( ( curStart, curEnd ) );
 
 	return condensedMeetings;

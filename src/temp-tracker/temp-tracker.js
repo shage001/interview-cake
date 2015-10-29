@@ -26,11 +26,11 @@ var createTempRecord = function()
 	var temperatureSum = 0.0;
 	var mode;
 	var mostOccurences = 0;
-	var occurences = [111];
+	var occurences = [];
 
 	for ( var i = 0; i < 111; i++ )
 	{
-		occurences[i] = 0;
+		occurences.push( 0 );
 	}
 
 	var insert = function( temperature )
