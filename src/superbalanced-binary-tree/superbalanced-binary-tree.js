@@ -8,10 +8,10 @@ function isSuperBalanced( treeRoot )
 	var stack = [];
 	var leafDepths = [];
 
-	stack.unshift( [treeRoot, 0] );
+	stack.push( [treeRoot, 0] );
 	while ( stack.length !== 0 )
 	{
-		var node = stack.shift();
+		var node = stack.pop();
 		/* check if leaf and add depth if appropriate */
 		if ( !node[0].leftChild && !node[0].rightChild ) {
 			/* only add if unique depth */
@@ -25,10 +25,10 @@ function isSuperBalanced( treeRoot )
 		}
 		/* add children and depths as appropriate */
 		if ( node[0].leftChild ) {
-			stack.unshift( [node[0].leftChild, node[1] + 1] );
+			stack.push( [node[0].leftChild, node[1] + 1] );
 		}
 		if ( node[0].rightChild ) {
-			stack.unshift( node[0].rightChild, node[1] + 1] );
+			stack.push( node[0].rightChild, node[1] + 1] );
 		}
 	}
 	return true;

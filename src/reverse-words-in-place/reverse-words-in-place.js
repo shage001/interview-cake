@@ -1,5 +1,5 @@
 /**********************************************************************************************************************
- * Your team is scrambling to decipher a recent message, worried it's a plot to break into a major 
+ * Your team is scrambling to decipher a recent message, worried it's a plot to break into a major
  * European National Cake Vault. The message has been mostly deciphered, but all the words are backwards!
  * Your colleagues have handed off the last step to you.
  *
@@ -16,10 +16,10 @@ function reverseWords( message )
 	var wordStart = 0;
 	for ( var i = 0; i < len; i++ )
 	{
-		if ( chars[i] === ' ' || chars[i] === len ) {
+		if ( chars[i] === ' ' || i === len ) {
 			chars = reverseString( chars.join(), wordStart, i - 1 );
+			wordStart = i + 1;
 		}
-		wordStart = i + 1;
 	}
 	return chars.join();
 }
