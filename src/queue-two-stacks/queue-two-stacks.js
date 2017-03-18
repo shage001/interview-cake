@@ -25,7 +25,7 @@ function queueTwoStacks()
 	};
 
 	return {
-		enqueue: enqueue;
+		enqueue: enqueue,
 		dequeue: dequeue
 	};
 }
